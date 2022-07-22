@@ -9,12 +9,12 @@
                             section.order-last#result
                                 p.fs-1#result_text
                             form(action="")#operation_log
-                                input.w-100.border-0.fs-1.ps-4#operation_log_input(type="text", name="" placeholder = '0')
+                                input.w-100.border-0.fs-1.ps-4.pe-none.user-select-none#operation_log_input(type="text", name="" placeholder = '0')
                         section#keys_wrapper
                             .row.text-center
                                 .d-flex.fs-2
                                     button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.action_key C
-                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.action_key +/-
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.disabled.action_key +/-
                                     button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.operator_key %
                                     button.btn.btn-primary.rounded-0.w-100.rounded-0.border-0.fs-2.text-white.operator_key ÷
                             .row 
