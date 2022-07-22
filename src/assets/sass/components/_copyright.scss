@@ -1,0 +1,14 @@
+#copyright{
+    color: $main_dark_text ;
+    padding-top: 60px;
+    > span {
+        color: $main_dark_text ;
+    }
+    >a { 
+        color: $main_dark_text ;
+        transition: .5s ease;
+        &:hover{
+            color: #ffc107;
+        }
+    }
+}

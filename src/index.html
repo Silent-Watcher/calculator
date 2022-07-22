@@ -8,72 +8,74 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
-  <body class="vh-100 d-flex justify-content-center align-items-center">
-    <div class="container-fluid"> 
-      <div class="container"> 
-        <div class="row">
-          <header class="col-12 pb-5">
-            <h1 class="text-center fw-bold" id="main_heading">welcome to Calculator.js</h1>
-          </header>
-        </div>
-        <div class="row gx-0">
-          <main class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center" id="calculator_wrapper">
-            <section class="bg-white d-flex flex-column pb-2" id="calculator_display">
-              <section id="result">
-                <p class="fs-1" id="result_text">4</p>
-              </section>
-              <form action="" id="operation_log">
-                <input class="w-100 border-0 fs-1 ps-4" id="operation_log_input" type="text" name="" value="0">
-              </form>
+  <body class="vh-100 d-flex justify-content-center align-items-center"></body>
+  <div class="container-fluid"> 
+    <div class="container"> 
+      <div class="row">
+        <header class="col-12 pb-5">
+          <h1 class="text-center fw-bold" id="main_heading">welcome to Calculator.js</h1>
+        </header>
+      </div>
+      <div class="row gx-0">
+        <main class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center" id="calculator_wrapper">
+          <section class="bg-white d-flex flex-column pb-2" id="calculator_display">
+            <section class="order-last" id="result">
+              <p class="fs-1" id="result_text"></p>
             </section>
-            <section id="keys_wrapper">
-              <div class="row text-center">
-                <div class="d-flex fs-2">
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">C</button>
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">+/-</button>
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">%</button>
-                  <button class="btn btn-primary rounded-0 w-100 rounded-0 border-0 fs-2 text-white">÷</button>
-                </div>
+            <form action="" id="operation_log">
+              <input class="w-100 border-0 fs-1 ps-4" id="operation_log_input" type="text" name="" placeholder="0">
+            </form>
+          </section>
+          <section id="keys_wrapper">
+            <div class="row text-center">
+              <div class="d-flex fs-2">
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 action_key">C</button>
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 action_key">+/-</button>
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 operator_key">%</button>
+                <button class="btn btn-primary rounded-0 w-100 rounded-0 border-0 fs-2 text-white operator_key">÷</button>
               </div>
-              <div class="row"> 
-                <div class="d-flex fs-2">
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">7</button>
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">8</button>
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">9</button>
-                  <button class="btn btn-primary rounded-0 w-100 rounded-0 border-0 fs-2 text-white">×</button>
-                </div>
+            </div>
+            <div class="row"> 
+              <div class="d-flex fs-2">
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 number_key">7</button>
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 number_key">8</button>
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 number_key">9</button>
+                <button class="btn btn-primary rounded-0 w-100 rounded-0 border-0 fs-2 text-white operator_key">×</button>
               </div>
-              <div class="row"> 
-                <div class="d-flex fs-2">
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">4</button>
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">5</button>
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">6</button>
-                  <button class="btn btn-primary rounded-0 w-100 rounded-0 border-0 fs-2 text-white">-</button>
-                </div>
+            </div>
+            <div class="row"> 
+              <div class="d-flex fs-2">
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 number_key">4</button>
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 number_key">5</button>
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 number_key">6</button>
+                <button class="btn btn-primary rounded-0 w-100 rounded-0 border-0 fs-2 text-white operator_key">-</button>
               </div>
-              <div class="row">
-                <div class="d-flex fs-2">
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">1</button>
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">2</button>
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">3</button>
-                  <button class="btn btn-primary rounded-0 w-100 rounded-0 border-0 fs-2 text-white">+</button>
-                </div>
+            </div>
+            <div class="row">
+              <div class="d-flex fs-2">
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 number_key">1</button>
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 number_key">2</button>
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 number_key">3</button>
+                <button class="btn btn-primary rounded-0 w-100 rounded-0 border-0 fs-2 text-white operator_key">+</button>
               </div>
-              <div class="row"> 
-                <div class="d-flex fs-2">
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">0</button>
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">.</button>
-                  <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2">del</button>
-                  <button class="btn btn-warning rounded-0 w-100 rounded-0 border-0 fs-2">=</button>
-                </div>
+            </div>
+            <div class="row"> 
+              <div class="d-flex fs-2">
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 number_key">0</button>
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 operator_key">.</button>
+                <button class="btn btn-light rounded-0 w-100 rounded-0 border-0 fs-2 action_key">del</button>
+                <button class="btn btn-warning rounded-0 w-100 rounded-0 border-0 fs-2 action_key">=</button>
               </div>
-            </section>
-          </main>
-        </div>
-        <div class="row text-center pt-5" id="copyright">
-          <p class="text-white"></p>
-        </div>
+            </div>
+            <div class="row text-center">
+              <footer class="user-select-none" id="copyright">Made with <span class="text-danger">❤ </span>by <a class="text-decoration-none" href="https://github.com/Silent-Watcher" target="_blank">silentWatcher</a>
+                <time>2022</time> ©
+              </footer>
+            </div>
+          </section>
+        </main>
       </div>
     </div>
-  </body>
+  </div>
+  <script src="assets/js/calc.js"> </script>
 </html>

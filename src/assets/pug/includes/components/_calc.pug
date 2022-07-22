@@ -1,0 +1,44 @@
+.container-fluid 
+        .container 
+                .row
+                    header.col-12.pb-5
+                        h1.text-center.fw-bold#main_heading welcome to Calculator.js
+                .row.gx-0
+                    main.col-12.col-sm-8.offset-sm-2.col-md-6.offset-md-3.col-lg-4.offset-lg-4.text-center#calculator_wrapper
+                        section.bg-white.d-flex.flex-column.pb-2#calculator_display
+                            section.order-last#result
+                                p.fs-1#result_text
+                            form(action="")#operation_log
+                                input.w-100.border-0.fs-1.ps-4#operation_log_input(type="text", name="" placeholder = '0')
+                        section#keys_wrapper
+                            .row.text-center
+                                .d-flex.fs-2
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.action_key C
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.action_key +/-
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.operator_key %
+                                    button.btn.btn-primary.rounded-0.w-100.rounded-0.border-0.fs-2.text-white.operator_key ÷
+                            .row 
+                                .d-flex.fs-2
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.number_key 7
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.number_key 8
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.number_key 9
+                                    button.btn.btn-primary.rounded-0.w-100.rounded-0.border-0.fs-2.text-white.operator_key ×
+                            .row 
+                                .d-flex.fs-2
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.number_key 4
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.number_key 5
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.number_key 6
+                                    button.btn.btn-primary.rounded-0.w-100.rounded-0.border-0.fs-2.text-white.operator_key -
+                            .row
+                                .d-flex.fs-2
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.number_key 1
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.number_key 2
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.number_key 3
+                                    button.btn.btn-primary.rounded-0.w-100.rounded-0.border-0.fs-2.text-white.operator_key +
+                            .row 
+                                .d-flex.fs-2
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.number_key 0
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.operator_key .
+                                    button.btn.btn-light.rounded-0.w-100.rounded-0.border-0.fs-2.action_key del
+                                    button.btn.btn-warning.rounded-0.w-100.rounded-0.border-0.fs-2.action_key =
+                            include _copyright

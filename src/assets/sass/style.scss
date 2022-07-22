@@ -2,6 +2,7 @@
 @import 'global/font';
 @import 'global/color';
 @import 'global/reset';
+@import 'components/copyright';
 
 header {
      #main_heading{
@@ -12,7 +13,7 @@ header {
 #calculator_wrapper{
     #calculator_display{
         #result{
-
+            transition: all .5s ease;
         }
         #operation_log{
             #operation_log_input{

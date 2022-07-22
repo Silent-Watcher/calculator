@@ -15,11 +15,29 @@ body {
   background-color: #232323;
 }
 
+#copyright {
+  color: #f5f5f5;
+  padding-top: 60px;
+}
+#copyright > span {
+  color: #f5f5f5;
+}
+#copyright > a {
+  color: #f5f5f5;
+  transition: 0.5s ease;
+}
+#copyright > a:hover {
+  color: #ffc107;
+}
+
 header #main_heading {
   color: #f5f5f5;
   font-size: 40px !important;
 }
 
+#calculator_wrapper #calculator_display #result {
+  transition: all 0.5s ease;
+}
 #calculator_wrapper #calculator_display #operation_log #operation_log_input {
   outline: 0;
 }/*# sourceMappingURL=style.css.map */
