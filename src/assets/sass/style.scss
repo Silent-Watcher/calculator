@@ -1,0 +1,24 @@
+@charset 'utf-8';
+@import 'global/font';
+@import 'global/color';
+@import 'global/reset';
+
+header {
+     #main_heading{
+        color: $main_dark_text;
+        font-size: 40px!important;
+     }
+}
+#calculator_wrapper{
+    #calculator_display{
+        #result{
+
+        }
+        #operation_log{
+            #operation_log_input{
+                outline: 0;
+            }   
+        }
+    }
+
+}

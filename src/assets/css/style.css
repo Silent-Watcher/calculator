@@ -1,1 +1,25 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Edu+SA+Beginner&family=Edu+TAS+Beginner&family=Edu+VIC+WA+NT+Beginner&family=Source+Sans+Pro:wght@300&display=swap");
+.bg-purple {
+  background-color: #953de7;
+}
+
+.bg-gray {
+  background-color: #e4e4e4;
+}
+
+* {
+  font-family: "DM Sans";
+}
+
+body {
+  background-color: #232323;
+}
+
+header #main_heading {
+  color: #f5f5f5;
+  font-size: 40px !important;
+}
+
+#calculator_wrapper #calculator_display #operation_log #operation_log_input {
+  outline: 0;
+}/*# sourceMappingURL=style.css.map */
