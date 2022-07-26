@@ -2,5 +2,26 @@ doctype html
 html(lang="en")
     include includes/_head
     include includes/_body
+        nav.position-absolute.start-0.d-flex.flex-column.vh-100.text-white.bg-dark#history
+            span.text-warning.fs-2#close_history_btn 
+                i.fa-solid.fa-xmark
+            section.d-flex.flex-column.text-center.mt-5.mb-3#history_setting 
+                h2.user-select-none Logs 
+                span.align-self-end.me-2#clear_logs
+                    i.fa-solid.fa-arrows-rotate
+            section.bg-secondary.overflow-auto.fs-5#logs 
+                .log.border-bottom.border-dark.p-2.position-relative
+                    a.text-decoration-none.fs-6.position-absolute.end-0.top-0.me-2.mt-2.delete_log(href="#1")
+                        i.fa-solid.fa-trash
+                    .log_equation 12+1
+                    .log_result.text-center 13
+                .log.border-bottom.border-dark.p-2.position-relative
+                    a.text-decoration-none.fs-6.position-absolute.end-0.top-0.me-2.mt-2.delete_log(href="#1")
+                        i.fa-solid.fa-trash
+                    .log_equation 12+1
+                    .log_result.text-center 13
+            section.pt-2.mt-auto.text-center#version     
+                p#version_number v1.0.0 
+                    i.ps-1.fa-solid.fa-mug-hot
         include includes/components/_calc
     include includes/_scripts

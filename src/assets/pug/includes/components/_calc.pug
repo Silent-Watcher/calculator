@@ -1,10 +1,14 @@
-.container-fluid 
+.container-fluid#project-wrapper
         .container 
+                .row 
+                    .button_wrapper
+                        span.fs-2#open_history_btn
+                            i.fa-solid.fa-bars 
                 .row
                     header.col-12.pb-5
-                        h1.text-center.fw-bold#main_heading welcome to Calculator.js
+                        h1.animate__animated.animate__bounce.user-select-none.text-center.fw-bold#main_heading welcome to Calculator.js
                 .row.gx-0
-                    main.col-12.col-sm-8.offset-sm-2.col-md-6.offset-md-3.col-lg-4.offset-lg-4.text-center#calculator_wrapper
+                    main.col-12.col-sm-10.offset-sm-1.col-md-6.offset-md-3.col-lg-4.offset-lg-4.text-center#calculator_wrapper
                         section.bg-white.d-flex.flex-column.pb-2#calculator_display
                             section.order-last#result
                                 p.fs-1#result_text

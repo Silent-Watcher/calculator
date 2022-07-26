@@ -2,7 +2,9 @@
 @import 'global/font';
 @import 'global/color';
 @import 'global/reset';
+@import 'media/history_media';
 @import 'components/copyright';
+@import 'components/scrollbar';
 
 header {
      #main_heading{
@@ -22,4 +24,39 @@ header {
         }
     }
 
+}
+#open_history_btn {
+    z-index: 1000;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+}
+#history{
+    transform: translateX(-400px);
+    width: 25%;
+    z-index: 999;
+    #close_history_btn {
+        position: absolute;
+        display: inline-block;
+        top: 23px;
+        right: 14px;
+        cursor: pointer;
+    }
+    transition: all .5s ease;
+    #clear_logs{
+        cursor: pointer;
+        font-size: 20px;
+        transition: all .5s ease;
+        &:hover{
+            transform: rotate(360deg);
+        }
+    }
+    a.delete_log{
+        transition: all .2s ease;
+        color:#fff;
+        cursor: pointer;
+        &:hover{
+            color: #ec606e;
+        }
+    }
 }

@@ -5,19 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
-  <body class="vh-100 d-flex justify-content-center align-items-center"></body>
-  <div class="container-fluid"> 
+  <body class="position-relative overflow-hidden vh-100 d-flex justify-content-center align-items-center"></body>
+  <nav class="position-absolute start-0 d-flex flex-column vh-100 text-white bg-dark" id="history"><span class="text-warning fs-2" id="close_history_btn"> <i class="fa-solid fa-xmark"></i></span>
+    <section class="d-flex flex-column text-center mt-5 mb-3" id="history_setting"> 
+      <h2 class="user-select-none">Logs </h2><span class="align-self-end me-2" id="clear_logs"><i class="fa-solid fa-arrows-rotate"></i></span>
+    </section>
+    <section class="bg-secondary overflow-auto fs-5" id="logs"> 
+      <div class="log border-bottom border-dark p-2 position-relative"><a class="text-decoration-none fs-6 position-absolute end-0 top-0 me-2 mt-2 delete_log" href="#1"><i class="fa-solid fa-trash"></i></a>
+        <div class="log_equation">12+1</div>
+        <div class="log_result text-center">13</div>
+      </div>
+      <div class="log border-bottom border-dark p-2 position-relative"><a class="text-decoration-none fs-6 position-absolute end-0 top-0 me-2 mt-2 delete_log" href="#1"><i class="fa-solid fa-trash"></i></a>
+        <div class="log_equation">12+1</div>
+        <div class="log_result text-center">13</div>
+      </div>
+    </section>
+    <section class="pt-2 mt-auto text-center" id="version">    
+      <p id="version_number">v1.0.0 <i class="ps-1 fa-solid fa-mug-hot"></i></p>
+    </section>
+  </nav>
+  <div class="container-fluid" id="project-wrapper">
     <div class="container"> 
+      <div class="row"> 
+        <div class="button_wrapper"><span class="fs-2" id="open_history_btn"><i class="fa-solid fa-bars"> </i></span></div>
+      </div>
       <div class="row">
         <header class="col-12 pb-5">
-          <h1 class="text-center fw-bold" id="main_heading">welcome to Calculator.js</h1>
+          <h1 class="animate__animated animate__bounce user-select-none text-center fw-bold" id="main_heading">welcome to Calculator.js</h1>
         </header>
       </div>
       <div class="row gx-0">
-        <main class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center" id="calculator_wrapper">
+        <main class="col-12 col-sm-10 offset-sm-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center" id="calculator_wrapper">
           <section class="bg-white d-flex flex-column pb-2" id="calculator_display">
             <section class="order-last" id="result">
               <p class="fs-1" id="result_text"></p>
