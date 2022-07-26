@@ -15,47 +15,47 @@ const clearLogsBtn = document.getElementById('clear_logs');
 const logs = document.getElementById('logs');
 const projectWrapper = document.getElementById('project-wrapper');
 // console.log([...logs.children].length);
-console.log(history.clientWidth);
+// console.log(history.clientWidth);
 let validOperators = ['×', '÷', '+', '-', '%', '.'];
 
 function parse(string) {
   return Function(`'use strict'; return(${string})`)();
 }
-function createNewLog(equation, result) {
-  let newLog = document.createElement('div');
-  let newTrashLogBtn = document.createElement('a');
-  let newTrashIcon = document.createElement('i');
-  let newEquation = document.createElement('div');
-  let newResult = document.createElement('div');
-  newEquation.innerHTML = equation;
-  newResult.innerHTML = result;
-  newEquation.classList.add('log_equation');
-  newResult.classList.add('log_result', 'text-center');
-  newLog.classList.add(
-    'log',
-    'border-bottom',
-    'border-dark',
-    'p-2',
-    'position-relative'
-  );
-  newTrashLogBtn.classList.add(
-    'text-decoration-none',
-    'fs-6',
-    'position-absolute',
-    'end-0',
-    'top-0',
-    'me-2',
-    'mt-2',
-    'delete_log'
-  );
-  newTrashLogBtn.href.concat(`#${[...logs.children].length + 1}`);
-  newTrashIcon.classList.add('fa-solid', 'fa-trash');
-  newTrashLogBtn.appendChild(newTrashIcon);
-  newLog.appendChild(newTrashLogBtn);
-  newLog.appendChild(newEquation);
-  newLog.appendChild(newResult);
-  logs.appendChild(newLog);
-}
+// function createNewLog(equation, result) {
+//   let newLog = document.createElement('div');
+//   let newTrashLogBtn = document.createElement('a');
+//   let newTrashIcon = document.createElement('i');
+//   let newEquation = document.createElement('div');
+//   let newResult = document.createElement('div');
+//   newEquation.innerHTML = equation;
+//   newResult.innerHTML = result;
+//   newEquation.classList.add('log_equation');
+//   newResult.classList.add('log_result', 'text-center');
+//   newLog.classList.add(
+//     'log',
+//     'border-bottom',
+//     'border-dark',
+//     'p-2',
+//     'position-relative'
+//   );
+//   newTrashLogBtn.classList.add(
+//     'text-decoration-none',
+//     'fs-6',
+//     'position-absolute',
+//     'end-0',
+//     'top-0',
+//     'me-2',
+//     'mt-2',
+//     'delete_log'
+//   );
+//   newTrashLogBtn.href.concat(`#${[...logs.children].length + 1}`);
+//   newTrashIcon.classList.add('fa-solid', 'fa-trash');
+//   newTrashLogBtn.appendChild(newTrashIcon);
+//   newLog.appendChild(newTrashLogBtn);
+//   newLog.appendChild(newEquation);
+//   newLog.appendChild(newResult);
+//   logs.appendChild(newLog);
+// }
 // calc
 number_keys.forEach((number_key) => {
   number_key.addEventListener('click', function () {
@@ -96,7 +96,7 @@ action_keys.forEach((action_key) => {
         result.hidden = false;
         result.innerHTML = parse(operationInput.value);
         result.style.order = 'last';
-        createNewLog(operationInput.value, result.innerHTML);
+        // createNewLog(operationInput.value, result.innerHTML);
       }
     }
   });
@@ -104,11 +104,11 @@ action_keys.forEach((action_key) => {
 // end calc
 
 // nav
-if (logs.children.length === 0) {
-  clearLogsBtn.hidden = true;
-} else {
-  clearLogsBtn.hidden = false;
-}
+// if (logs.children.length > 0) {
+//   clearLogsBtn.hidden = false;
+// } else {
+//   clearLogsBtn.hidden = true;
+// }
 openHistoryBtn.addEventListener('click', function () {
   this.hidden= true;
   closeHistoryBtn.hidden = false;
@@ -121,16 +121,16 @@ closeHistoryBtn.addEventListener('click', function () {
   history.style.transform = 'translateX(-400px)';
   projectWrapper.style.marginLeft = '0';
 });
-logTrashBtns.forEach((logTrashBtn) => {
-  logTrashBtn.addEventListener('click', function () {
-    if (confirm('Are you sure?😐')) this.parentElement.remove();
-  });
-});
-clearLogsBtn.addEventListener('click', function () {
-  if (confirm('Are you sure?😐')) {
-    this.hidden = true;
-    logs.classList.add('text-center', 'bg-transparent');
-    logs.innerHTML = 'no logs here ! 🤗';
-  }
-});
+// logTrashBtns.forEach((logTrashBtn) => {
+//   logTrashBtn.addEventListener('click', function () {
+//     if (confirm('Are you sure?😐')) this.parentElement.remove();
+//   });
+// });
+// clearLogsBtn.addEventListener('click', function () {
+//   if (confirm('Are you sure?😐')) {
+//     this.hidden = true;
+//     logs.classList.add('text-center', 'bg-transparent');
+//     logs.innerHTML = 'no logs here ! 🤗';
+//   }
+// });
 // end nav
