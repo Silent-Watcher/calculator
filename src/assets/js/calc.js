@@ -33,6 +33,7 @@ action_keys.forEach((action_key) => {
   action_key.addEventListener('click', function () {
     if (this.textContent === 'C') {
       operationInput.value = '';
+      operationInput.classList.remove('fs-4','text-secondary');
       result.hidden = true;
     }
     if (this.textContent === 'del') {
@@ -46,6 +47,7 @@ action_keys.forEach((action_key) => {
       else {
         operationInput.value = operationInput.value.replace('×', '*');
         operationInput.value = operationInput.value.replace('÷', '/');
+        operationInput.classList.add('fs-4','text-secondary');
         result.hidden = false;
         result.innerHTML = parse(operationInput.value);
         result.style.order = 'last';
